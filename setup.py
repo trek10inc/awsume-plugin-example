@@ -4,7 +4,7 @@ setup(
     name='TODO',
     entry_points={
         'awsume': [
-            'accounts = TODO'
+            'TODO = TODO'
         ]
     },
     py_modules=['TODO'],
