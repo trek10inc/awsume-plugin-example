@@ -98,22 +98,22 @@ def post_get_credentials(config: dict, arguments: argparse.Namespace, profiles: 
 
 
 @hookimpl
-def catch_profile_not_found_exception(config: dict, arguments: argparse.Namespace, profiles: dict):
+def catch_profile_not_found_exception(config: dict, arguments: argparse.Namespace, profiles: dict, error: Exception):
     safe_print('Uh oh, a profile was not found')
 
 
 @hookimpl
-def catch_invalid_profile_exception(config: dict, arguments: argparse.Namespace, profiles: dict):
+def catch_invalid_profile_exception(config: dict, arguments: argparse.Namespace, profiles: dict, error: Exception):
     safe_print('Uh oh, a profile was invalid')
 
 
 @hookimpl
-def catch_user_authentication_error(config: dict, arguments: argparse.Namespace, profiles: dict):
+def catch_user_authentication_error(config: dict, arguments: argparse.Namespace, profiles: dict, error: Exception):
     safe_print('Uh oh, could not authenticate the user')
 
 
 @hookimpl
-def catch_role_authentication_error(config: dict, arguments: argparse.Namespace, profiles: dict):
+def catch_role_authentication_error(config: dict, arguments: argparse.Namespace, profiles: dict, error: Exception):
     safe_print('Uh oh, could not authenticate the role')
 
 
